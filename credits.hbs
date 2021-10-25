@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lonely Star</title>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            max-width: 720px;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            white-space: pre-wrap;
+            padding: 16px;
+            margin-bottom: 0;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin-left: 0;
+            margin-bottom: 8px;
+        }
+
+        details {
+            border: 1px solid #000000;
+            border-radius: 4px;
+            padding: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lonely Star</h1>
+
+    <dl>
+        <dt>Code, music and pixel art</dt>
+        <dd><a href="https://17cupsofcoffee.itch.io/">Joe Clay (aka 17cupsofcoffee)</a></dd>
+
+        <dt>Score font</dt>
+        <dd>'<a href="https://managore.itch.io/m5x7">m5x7</a>' by <a href="https://managore.itch.io/">Daniel Linssen (aka Managore)</a></dd>
+    </dl>
+
+    <h2>Open Source Licenses</h2>
+    <p>
+        This game was built using various open source libraries. Their license terms are listed below.
+    </p>
+    <p>
+        Some licenses may be listed more than once, due to libraries distributing differing versions of the license text. 
+    </p>
+
+    {{#each licenses}}
+        <h3>{{name}}</h3>
+        <details>
+            <summary>View license text</summary>
+            <pre>{{text}}</pre>
+        </details>
+        <p>Used by:</p>
+        <ul>
+            {{#each used_by}}
+                <li>
+                    <a href="{{#if crate.repository}} {{crate.repository}} {{else}} https://crates.io/crates/{{crate.name}} {{/if}}">{{crate.name}} {{crate.version}}</a>
+                </li>
+            {{/each}}
+        </ul>
+        
+    {{/each}}
+</body>
+</html>
