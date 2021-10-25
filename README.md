@@ -2,6 +2,8 @@
 
 *Space is a lonely place, but at least you've got the music to keep you company.*
 
+![Screenshot](screenshot.png)
+
 [Lonely Star](https://17cupsofcoffee.itch.io/lonely-star) is a 2D side-scrolling 'endless runner' game, with simple generative music.
 
 It was created in February 2020 for [Weekly Game Jam 135](https://itch.io/jam/weekly-game-jam-135/rate/567474), which had the theme 'Shooting Stars'.
